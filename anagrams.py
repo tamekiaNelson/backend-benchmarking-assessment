@@ -41,10 +41,11 @@ def find_anagrams(words):
     """
     anagrams = {}
     for word in words:
-        if alphabetize(word) in anagrams:
-            anagrams[alphabetize(word)].append(word)
+        alpha = alphabetize(word)
+        if alpha in anagrams:
+            anagrams[alpha].append(word)
         else:
-            anagrams[alphabetize(word)] = [word]
+            anagrams[alpha] = [word]
     return anagrams
 
 
